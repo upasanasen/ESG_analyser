@@ -2,6 +2,10 @@
 
 A public no-API Streamlit app that screens sustainability reports for ESG disclosure maturity, CSRD/ESRS readiness, framework coverage, disclosure gaps, and greenwashing risks.
 
+## Live app
+
+Try the deployed Streamlit app here: [ESG Report Analyser](https://esganalyser-vi66mikxysdymj3hyd8aga.streamlit.app/)
+
 ## What it does
 
 - Upload a sustainability report PDF
