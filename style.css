@@ -1,0 +1,187 @@
+/* ESG Analyser — light theme (One Click LCA-inspired)
+   Fonts: Bricolage Grotesque (display) + Hanken Grotesk (UI/body) */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+
+html, body, .stApp, [class*="css"] {
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+}
+.stApp { background: #FFFFFF; color: #10201A; }
+
+h1, h2, h3, h4 {
+  font-family: 'Bricolage Grotesque', sans-serif !important;
+  letter-spacing: -0.02em;
+  color: #10201A;
+}
+
+/* hide default chrome */
+#MainMenu, footer { visibility: hidden; }
+header[data-testid="stHeader"] { background: transparent; }
+
+.block-container { padding-top: 1.2rem; padding-bottom: 3rem; max-width: 1200px; }
+
+/* ---------- Sidebar ---------- */
+section[data-testid="stSidebar"] {
+  background: #FFFFFF;
+  border-right: 1px solid #EAEEEB;
+}
+.side-logo { display: flex; align-items: center; gap: 11px; padding: 4px 0 14px; border-bottom: 1px solid #EEF1EF; }
+.side-logo-mark {
+  width: 38px; height: 38px; border-radius: 11px; background: #0C7C43;
+  display: flex; align-items: center; justify-content: center; color: #fff;
+  font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 17px;
+}
+.side-logo-name { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 15px; color: #10201A; line-height: 1.2; }
+.side-logo-sub { font-size: 11px; color: #7C8A82; font-weight: 600; }
+.side-heading {
+  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: #159B5F; margin: 18px 0 8px 2px;
+}
+.side-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; color: #59635C; font-weight: 600; font-size: 13.5px; }
+.side-item:hover { background: #F3F7F4; }
+.side-dot { width: 7px; height: 7px; border-radius: 50%; background: #D3DAD5; flex: none; }
+.side-note {
+  margin-top: 16px; padding: 14px; border-radius: 14px; background: #E7F5EC;
+}
+.side-note-title { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #0C7C43; margin-bottom: 5px; }
+.side-note-body { font-size: 12px; line-height: 1.5; color: #3C5348; font-weight: 500; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; padding: 64px 40px; border-radius: 18px;
+  background-size: cover; background-position: center;
+  text-align: center; margin-bottom: 18px; overflow: hidden;
+}
+.hero .eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: #8FE3BB; margin-bottom: 12px; text-shadow: 0 1px 10px rgba(8,26,19,.5);
+}
+.hero h1 {
+  font-size: 46px; font-weight: 800; color: #FFFFFF !important; margin: 0;
+  line-height: 1.05; text-shadow: 0 2px 24px rgba(8,26,19,.45);
+}
+.hero p {
+  color: rgba(255,255,255,.92); font-size: 16px; max-width: 640px;
+  margin: 14px auto 0; font-weight: 500; text-shadow: 0 1px 12px rgba(8,26,19,.5);
+}
+
+.tag-row { text-align: center; margin: 2px 0 16px; }
+.tag {
+  display: inline-block; margin: 5px 4px 0; padding: 7px 15px; border-radius: 999px;
+  background: #E7F5EC; color: #0C7C43; font-size: 13px; font-weight: 700;
+}
+
+/* ---------- Cards & panels ---------- */
+.metric-card {
+  padding: 22px; border-radius: 20px; background: #FFFFFF;
+  border: 1px solid #EAEEEB; min-height: 170px;
+  transition: box-shadow .2s, transform .2s;
+}
+.metric-card:hover { box-shadow: 0 12px 30px -12px rgba(16,32,26,.18); transform: translateY(-2px); }
+.metric-card.mint { background: #E7F5EC; border: 1px solid #E7F5EC; }
+.metric-label {
+  color: #8A968E; font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.metric-card.mint .metric-label { color: #0C7C43; }
+.metric-value {
+  color: #10201A; font-family: 'Bricolage Grotesque';
+  font-size: 34px; font-weight: 800; line-height: 1; letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.metric-value.deep { color: #0B4A2C; }
+.metric-value.amber { color: #B0791B; }
+.metric-value.red { color: #D64A3E; }
+.metric-note { color: #59635C; font-size: 12.5px; margin-top: 10px; font-weight: 500; line-height: 1.45; }
+.metric-card.mint .metric-note { color: #3C5348; }
+
+.panel {
+  padding: 22px; border-radius: 20px; background: #FFFFFF;
+  border: 1px solid #EAEEEB; margin-bottom: 16px;
+}
+.panel-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: #8A968E; margin-bottom: 12px;
+}
+.exec-panel {
+  padding: 24px 26px; border-radius: 20px; background: #0C7C43;
+  color: #EAF7EF; margin-bottom: 16px;
+}
+.exec-panel .panel-title { color: #9AD9B6; }
+.exec-panel p { color: #EAF7EF; font-size: 15px; line-height: 1.65; font-weight: 500; margin: 0; }
+
+/* score ring (conic gauge) */
+.ring {
+  width: 126px; height: 126px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; margin: 2px 0;
+}
+.ring-hole {
+  width: 98px; height: 98px; border-radius: 50%; background: #E7F5EC;
+  display: flex; align-items: baseline; justify-content: center; padding-top: 32px;
+}
+.ring-num { font-family: 'Bricolage Grotesque'; font-size: 34px; font-weight: 800; color: #0B4A2C; line-height: 1; }
+.ring-den { font-family: 'Bricolage Grotesque'; font-size: 13px; font-weight: 700; color: #6FA787; }
+
+/* progress bar */
+.bar-track { position: relative; height: 9px; border-radius: 5px; background: #EDF1EE; margin-top: 16px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 5px; background: #17A05F; }
+
+/* recommendations */
+.rec-item {
+  display: flex; gap: 12px; align-items: baseline; padding: 10px 0;
+  border-bottom: 1px solid #F1F3F1; font-size: 14px; font-weight: 500; color: #10201A;
+}
+.rec-item:last-child { border-bottom: none; }
+.rec-num { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 13px; color: #17A05F; flex: none; }
+
+/* step cards (empty state) */
+.step-card {
+  padding: 22px; border-radius: 16px; background: #FFFFFF; border: 1px solid #EAEEEB;
+  transition: box-shadow .2s, transform .2s; min-height: 140px;
+}
+.step-card:hover { box-shadow: 0 12px 30px -12px rgba(16,32,26,.16); transform: translateY(-2px); }
+.step-num { font-family: 'Bricolage Grotesque'; font-size: 13px; font-weight: 800; color: #17A05F; }
+.step-title { font-family: 'Bricolage Grotesque'; font-size: 17px; font-weight: 800; margin-top: 8px; letter-spacing: -0.01em; }
+.step-body { font-size: 13.5px; color: #59635C; margin-top: 5px; line-height: 1.45; font-weight: 500; }
+
+/* ---------- Streamlit widgets ---------- */
+/* file uploader */
+[data-testid="stFileUploaderDropzone"] {
+  border: 2px dashed #B7E0C6; background: #F4FBF6; border-radius: 18px; padding: 24px;
+}
+[data-testid="stFileUploaderDropzone"]:hover { border-color: #17A05F; background: #EEF9F1; }
+[data-testid="stFileUploaderDropzone"] button {
+  border-radius: 999px; background: #0C7C43; color: #fff; border: none; font-weight: 700;
+}
+[data-testid="stFileUploaderDropzone"] button:hover { background: #0A6538; color: #fff; }
+
+/* buttons */
+.stButton button, .stDownloadButton button {
+  border-radius: 999px; background: #0C7C43; color: #fff; border: none;
+  font-weight: 700; padding: .55rem 1.4rem; font-family: 'Hanken Grotesk';
+}
+.stButton button:hover, .stDownloadButton button:hover { background: #0A6538; color: #fff; border: none; }
+
+/* tabs -> pills */
+.stTabs [data-baseweb="tab-list"] { gap: 6px; border-bottom: 1px solid #EEF1EF; padding-bottom: 6px; }
+.stTabs [data-baseweb="tab"] {
+  border-radius: 999px; padding: 6px 16px; font-weight: 600; color: #59635C; background: transparent;
+}
+.stTabs [data-baseweb="tab"]:hover { background: #F3F7F4; color: #10201A; }
+.stTabs [aria-selected="true"] { background: #E7F5EC; color: #0C7C43 !important; }
+.stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab-border"] { display: none; }
+
+/* status widget */
+[data-testid="stStatus"] { border-radius: 16px; border: 1px solid #EAEEEB; }
+
+/* dataframes */
+[data-testid="stDataFrame"] { border: 1px solid #EAEEEB; border-radius: 14px; }
+
+/* alerts */
+.stAlert { border-radius: 14px; }
+
+/* footer note */
+.footer-note {
+  color: #9AA49D; font-size: 11.5px; font-weight: 500;
+  padding-top: 14px; border-top: 1px solid #EEF1EF; margin-top: 8px;
+}
